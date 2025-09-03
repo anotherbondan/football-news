@@ -1,0 +1,11 @@
+from django.shortcuts import render
+
+# Create your views here.
+def show_main(request):
+    context = {
+        'npm' : '2406352613',
+        'name': 'Ananda Gautama Sekar Khosmana',
+        'class': 'PBP D'
+    }
+
+    return render(request, "main.html", context)
