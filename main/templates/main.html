@@ -25,8 +25,7 @@
   <p>
     <b>{{ news.get_category_display }}</b>{% if news.is_featured %} |
     <b>Featured</b>{% endif %}{% if news.is_news_hot %} | <b>Hot</b>{% endif %}
-    | <i>{{ news.created_at|date:"d M Y H:i" }}</i> | Views: {{ news.news_views
-    }}
+    | <i>{{ news.created_at|date:"d M Y H:i" }}</i> | Views: {{news.news_views}}
   </p>
 
   {% if news.thumbnail %}
