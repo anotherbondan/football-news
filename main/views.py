@@ -35,7 +35,7 @@ def show_main(request):
 
     context = {
         'npm' : '2406352613',
-        'name': 'Ananda Gautama Sekar Khosmana',
+        'name': 'Ananda Gautama Sekar K',
         'class': 'PBP D',
         'news_list': news_list
     }
