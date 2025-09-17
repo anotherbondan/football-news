@@ -3,7 +3,7 @@ from main.forms import NewsForm
 from main.models import News
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import login, logout
 from django.contrib import messages
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
@@ -36,7 +36,6 @@ def show_json_by_id(request, news_id):
     except News.DoesNotExist:
         return HttpResponse(status=404)
 
-
 @login_required(login_url='/login')
 def show_main(request):
     filter_type = request.GET.get("filter", "all")  # default 'all'
@@ -47,9 +46,9 @@ def show_main(request):
         news_list = News.objects.filter(user=request.user)
 
     context = {
-        'npm': '240123456',
+        'npm': '2406352613',
         'name': request.user.username,
-        'class': 'PBP A',
+        'class': 'PBP D',
         'news_list': news_list,
         'last_login': request.COOKIES.get('last_login', 'Never')
     }
